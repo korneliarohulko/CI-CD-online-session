@@ -18,14 +18,6 @@ pipeline {
           sh 'python app_test.py'}
         }
       }
-      post {
-        success {
-          echo 'Code quality check passed'
-        }
-        failure {
-          echo 'Code quality check failed' 
-        }
-      }
     }
     
     stage('http-test') {
